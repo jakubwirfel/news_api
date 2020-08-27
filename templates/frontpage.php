@@ -11,7 +11,7 @@
                         <span>Jakub Wirfel / 27.08.2020</span>
                     </div>
                     <div class="img-box">
-                        <img src="https://via.placeholder.com/300.png/09f/fffC/O https://placeholder.com/">
+                        <img src="https://via.placeholder.com/300.png/09f/fffC/O https://placeholder.com/" alt="test">
                     </div>
                 </a>
             </article>

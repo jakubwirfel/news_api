@@ -537,4 +537,57 @@ footer h1 {
   font-weight: 700;
 }
 
+.news-container {
+  width: 60%;
+  height: auto;
+  z-index: 0;
+  position: relative;
+  margin: 0 auto !important;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.news-container .news {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.news-container .news .content {
+  width: 60%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #272424;
+  position: relative;
+}
+.news-container .news .content h1 {
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.news-container .news .content p {
+  padding-top: 20px;
+  font-size: 1.1em;
+}
+.news-container .news .content .box {
+  margin-top: 50px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5C868D;
+}
+.news-container .news .content .box .views {
+  font-size: 1.2em;
+}
+.news-container .news .content .box .views span {
+  padding-left: 10px;
+}
+.news-container .news .img-box {
+  max-width: 40%;
+  height: 100%;
+}
+.news-container .news .img-box img {
+  width: auto;
+  height: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

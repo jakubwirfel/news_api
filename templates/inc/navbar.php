@@ -4,13 +4,13 @@
             <h1><?php echo SITE_TITLE ?></h1>
         </div>
         <div class="items">
-            <a class="item">
+            <a  href="index.php" class="item">
                 Home
             </a>
             <a href="#login" class="item">
                 Sign In
             </a>
-            <a class="item">
+            <a href="registration.php" class="item">
                 Sign Up
             </a>
         </div>

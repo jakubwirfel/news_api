@@ -35,8 +35,9 @@
             align-items: center;
             h1 {
                 font-size: 1.6em;
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Roboto', sans-serif;
                 font-weight: 700;
+                letter-spacing: 2px;
                 color: $fontCL;
             }
         }
@@ -57,10 +58,12 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
                 transition: ease-in-out 0.15s;
                 &:hover {
                     transform: scale(1.1);
+                    font-weight: 700;
                     color: $fifCL;
                 }
             }

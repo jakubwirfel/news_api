@@ -46,9 +46,20 @@
                     width: 100%;
                     height: 120px;
                 }
-                span {
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 0.9em;
+                .box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 0.9em;
+                    }
+                    .views {
+                        font-size: 1.2em;
+                        span {
+                            padding-left: 10px;
+                        }
+                    }
                 }
             }
             .img-box {

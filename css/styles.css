@@ -255,7 +255,7 @@ footer h1 {
 .modal-window h1 {
   font-size: 150%;
   margin: 0 0 15px;
-  font-family: "Manjari", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 @media (max-width: 560px) {
   .modal-window h1 {
@@ -273,7 +273,7 @@ footer h1 {
   top: 20px;
   width: 70px;
   text-decoration: none;
-  font-family: "Manjari", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.2em;
 }
 .modal-window .modal-close:hover {
@@ -302,7 +302,7 @@ footer h1 {
 }
 .modal-window .form-login .label-login {
   font-size: 1.1em;
-  font-family: "Manjari", sans-serif;
+  font-family: "Roboto", sans-serif;
   align-items: center;
 }
 .modal-window .form-login .field-wrap-login {
@@ -316,12 +316,13 @@ footer h1 {
   border: 3px solid #5C868D;
   cursor: pointer;
   color: #272424;
-  font-family: "Manjari", sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: 0.2s;
 }
 .modal-window .form-login .button-login:hover {
   background-color: #5C868D;
-  color: #fff;
+  color: #272424;
+  font-weight: 700;
 }
 
 .main-container {

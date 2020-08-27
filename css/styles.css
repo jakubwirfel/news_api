@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+body {
+  margin: 0 !important;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background: #C8D6CA !important;
+}
+
+.alert-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+}
+.alert-box .error {
+  background: #E7F5DE;
+}
+.alert-box .success {
+  background: #99BFAA;
+}
+.alert-box .alert {
+  width: auto;
+  max-width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px 30px 0 0;
+}
+.alert-box .alert p {
+  width: auto;
+  font-family: "Manjari", sans-serif;
+  font-size: 100;
+  font-size: 1.1em;
+  color: #272424;
+  padding: 0 50px;
+}
+
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0 !important;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll {
+  background: #C8D6CA;
+  transition: background-color 6000ms linear;
+}
+
+.navigation {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 999;
+  transition: 0.2s;
+}
+.navigation .nav-box {
+  width: 60.2%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.navigation .nav-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #5C868D;
+  top: 60px;
+}
+.navigation .nav-box .logo {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navigation .nav-box .logo h1 {
+  font-size: 1.6em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #272424;
+}
+.navigation .nav-box .items {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation .nav-box .items .item {
+  width: auto;
+  padding: 10px;
+  height: auto;
+  color: #272424;
+  font-size: 1.5em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  transition: ease-in-out 0.15s;
+}
+.navigation .nav-box .items .item:hover {
+  transform: scale(1.1);
+  color: #6C3D46;
+}
+
+footer h1 {
+  text-align: center;
+  font-size: 1.6em;
+  font-family: "Open Sans", sans-serif;
+  color: #272424;
+  margin-top: -75px !important;
+}
+
+.main-container {
+  width: 60%;
+  height: auto;
+  z-index: 0;
+  position: relative;
+  margin: 0 auto !important;
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+}
+.main-container .news-box {
+  width: 60%;
+  height: auto;
+  position: relative;
+}
+.main-container .news-box h1 {
+  font-size: 3em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #272424;
+}
+.main-container .news-box .news {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background: #99BFAA;
+  margin-top: 20px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+}
+.main-container .news-box .news .content {
+  width: 70%;
+  height: 100%;
+  padding: 15px;
+}
+.main-container .news-box .news .content h2 {
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.main-container .news-box .news .content p {
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  line-height: 18px;
+  width: 100%;
+  height: 120px;
+}
+.main-container .news-box .news .content span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+}
+.main-container .news-box .news .img-box {
+  width: 30%;
+  height: 100%;
+}
+.main-container .news-box .news .img-box img {
+  height: 100%;
+  width: 100%;
+}
+.main-container .line {
+  width: 8px;
+  height: auto;
+  background: #5C868D;
+}
+.main-container .info {
+  width: 30%;
+  height: 400px;
+  position: relative;
+}
+.main-container .info .best-authors,
+.main-container .info .best-news {
+  width: 100%;
+  height: auto;
+  background: #99BFAA;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .info .best-authors:last-child,
+.main-container .info .best-news:last-child {
+  margin-top: 50px !important;
+}
+.main-container .info .best-authors h3,
+.main-container .info .best-news h3 {
+  font-size: 1.4em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.main-container .info .best-authors p, .main-container .info .best-authors a,
+.main-container .info .best-news p,
+.main-container .info .best-news a {
+  padding-top: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.main-container .info .best-authors p span, .main-container .info .best-authors a span,
+.main-container .info .best-news p span,
+.main-container .info .best-news a span {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+.main-container .info .best-authors a,
+.main-container .info .best-news a {
+  cursor: pointer;
+}
+.main-container .info .best-authors a:hover,
+.main-container .info .best-news a:hover {
+  color: #6C3D46;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/*# sourceMappingURL=styles.css.map */

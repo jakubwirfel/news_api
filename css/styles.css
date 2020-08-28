@@ -704,6 +704,7 @@ footer h1 {
   top: -30px;
   left: -30px;
   background: #E7F5DE;
+  color: #272424;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -716,6 +717,77 @@ footer h1 {
 .user-container .user-news .img-box img {
   height: 100%;
   width: 100%;
+}
+
+.edit-container {
+  width: 60%;
+  height: auto;
+  z-index: 0;
+  position: relative;
+  margin: 0 auto !important;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.edit-container h1 {
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #272424;
+}
+.edit-container .btn {
+  background: #99BFAA;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #272424;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+  border: 2px solid #6C3D46;
+  transition: ease-in-out 0.2s;
+}
+.edit-container .btn i {
+  padding-right: 10px;
+}
+.edit-container .btn:hover {
+  transform: scale(1.1);
+}
+.edit-container .edit-form {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+}
+.edit-container .edit-form .form-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 30px !important;
+}
+.edit-container .edit-form .form-group label {
+  font-size: 1.5em;
+  color: #272424;
+  font-family: "Roboto", sans-serif;
+  margin-right: 50px !important;
+}
+.edit-container .edit-form .form-group .input-edit {
+  background: #99BFAA;
+  border: none;
+  width: 80%;
+  font-size: 1.2em;
+  color: #272424;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  right: 0;
+}
+.edit-container .edit-form .form-group .box {
+  display: flex;
+  flex-direction: column;
+}
+.edit-container .edit-form .form-group .box .img-input {
+  margin-top: 20px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

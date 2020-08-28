@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="img-box">
-                <button class="edit"><i class="fas fa-edit"></i></button>
+                <a class="edit" href="edit.php"><i class="fas fa-edit"></i></a>
                 <img src="https://via.placeholder.com/300.png/09f/fffC/O https://placeholder.com/" alt="test">
             </div>
         </article>

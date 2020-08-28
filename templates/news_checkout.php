@@ -3,18 +3,18 @@
     <main class="news-container">
         <article class="news">
             <div class="content">
-                <h1>Test news 1</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsam consequuntur excepturi aliquam qui architecto quibusdam iste itaque accusamus dolor doloremque placeat a, quae accusantium, minus, assumenda temporibus nesciunt Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident neque a porro eveniet eaque rerum voluptatem, sunt delectus explicabo modi enim culpa magni ea, pariatur molestiae sed in, aliquam  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem possimus est, error expedita id quibusdam molestiae nostrum excepturi nam quisquam sint a totam voluptatibus, dolorum deleniti atque corrupti eaque et!</p>
+                <h1><?php echo $news -> title?></h1>
+                <p><?php echo $news -> content?></p>
                 <div class="box">
-                    <span>Jakub Wirfel / 27.08.2020</span>
+                    <span><?php echo $news -> name?> / <?php echo $news -> creation_date?></span>
                     <div class="views">
                         <i class="fas fa-eye"></i>
-                        <span>300</span>
+                        <span><?php echo $news -> views?></span>
                     </div>
                 </div>
             </div>
             <div class="img-box">
-                <img src="https://via.placeholder.com/300.png/09f/fffC/O https://placeholder.com/" alt="test">
+                <img src="<?php echo $news -> src?>" alt="<?php echo $news -> alt?>">
             </div>
         </article>
     </main>

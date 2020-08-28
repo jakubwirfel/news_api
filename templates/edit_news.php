@@ -3,22 +3,23 @@
     <main class="edit-container">
         <h1>Edit Test news 1 news</h1>
         <button class="btn" id="ToogleFieldset"><i class="fas fa-pen"></i> Edit</button>
-        <form class="edit-form" method="POST" action="edit_news.php">
+        <form class="edit-form" method="POST" action="profile.php?name=<?php echo $_SESSION['username'] ?>">
             <fieldset id="Fieldset" disabled>
             <div class="form-group">
                 <label for="title">News title:</label>
-                <input name="title" type="text" id="title" class="input-edit" value="Test news 1"/>
+                <input name="title" type="text" id="title" class="input-edit" value="<?php echo $news -> title?>"/>
             </div>
             <div class="form-group">
                 <label for="content">News content:</label>
-                <textarea name="content" id="content" rows="10" class="input-edit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit sapiente, laboriosam quisquam sed mollitia vitae commodi sunt maxime tempora ducimus, non amet, voluptas reprehenderit laborum officiis doloremque. Repellendus, beatae possimus.</textarea>
+                <textarea name="content" id="content" rows="10" class="input-edit"><?php echo $news -> content?></textarea>
             </div>
             <div class="form-group">
                 <div class="box">
                     <label for="inputImage" >Change image</label>
                     <input type="file" id="image" name="image" class="input-edit img-input">
                 </div>
-                <img src="https://via.placeholder.com/300.png/09f/fffC/O https://placeholder.com/" alt="test">
+                <img src="<?php echo $news -> src?>" alt="<?php echo $news -> alt?>">
+                <input hidden type="text" name="path" value="<?php echo $news -> src?>">
             </div>
             <input type="submit" name="update" value="Update" class="btn">
             </fieldset>

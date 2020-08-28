@@ -7,12 +7,21 @@
             <a  href="index.php" class="item">
                 Home
             </a>
-            <a href="#login" class="item">
-                Sign In
-            </a>
-            <a href="registration.php" class="item">
-                Sign Up
-            </a>
+            <?php  if (isset($_SESSION['confirm']) && $_SESSION['confirm'] == 'start') : ?>
+                <a href="profile.php?name=<?php echo $_SESSION['username'] ?>" class="item">
+                    My profile
+                </a>
+                <a href="<?php echo $_SERVER['PHP_SELF'] ?>?logout='1'" class="item">
+                    Logout
+                </a>
+            <?php else: ?>
+                <a href="#login" class="item">
+                    Sign In
+                </a>
+                <a href="registration.php" class="item">
+                    Sign Up
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>

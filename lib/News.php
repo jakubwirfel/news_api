@@ -97,11 +97,23 @@ class News {
 
     //Get all news data (to print  news on front page)
     public function displayNewsList() {
-        $this -> db -> query("SELECT n.id, n.title, n.content, n.creation_date, n.views, i.alt, i.src, u.name FROM news n
+        $this -> db -> query("SELECT DISTINCT n.id, n.title, n.content, n.creation_date, n.views, i.alt, i.src, u.name FROM news n
                                 LEFT JOIN news_images i ON n.image_id = i.id
                                 LEFT JOIN users_news un ON n.id = un.news_id
                                 LEFT JOIN users u ON u.id = un.user_id
+                                GROUP BY n.id
                                 ORDER BY n.id DESC");
+
+        $results = $this -> db -> resultSet();
+
+        return $results;
+    }
+
+    //Get all contributors
+    public function getContributors() {
+        $this -> db -> query("SELECT un.news_id,u.name
+                                FROM users_news un
+                                LEFT JOIN users u ON u.id = un.user_id");
 
         $results = $this -> db -> resultSet();
 
@@ -198,6 +210,33 @@ class News {
         } else {
             return false;
         }
+    }
+
+    //Add contributor to news
+    public function addContributor($contId, $newsId) {
+        //Select contributors to news
+        $this -> db -> query("SELECT user_id, news_id FROM users_news WHERE news_id = :id AND user_id LIKE :userId");
+
+        $this -> db -> bind(':id', $newsId);
+        $this -> db -> bind(':userId', $contId);
+
+        $results = $this -> db -> resultSet();
+        $numRows = $this -> db -> rowCount();
+        //Check execute and no duplicate
+            if($numRows === 0) {
+                $this -> db -> query("INSERT INTO users_news (user_id, news_id) VALUES (:user_id, :news_id)");
+
+                $this -> db -> bind(':user_id', $contId);
+                $this -> db -> bind(':news_id', $newsId);
+
+                if($this -> db -> execute()) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
     }
 
     //Get 3 best news of the week

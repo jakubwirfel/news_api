@@ -12,6 +12,7 @@
     $template -> bestsUsers = $news -> getBestUsers();
 
     $template -> newsList = $news -> displayNewsList();
+    $template -> contributorsList = $news -> getContributors();
 
     echo $template;
 ?>

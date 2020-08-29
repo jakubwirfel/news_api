@@ -10,7 +10,12 @@
                     <h2><?php echo $news -> title?></h2>
                     <p><?php echo $news -> content?></p>
                     <div class="box">
-                        <span><?php echo $news -> name?> / <?php echo $news -> creation_date?></span>
+                        <span><?php foreach($contributorsList as $contributor) {
+                                if($contributor -> news_id === $news -> id) {
+                                    echo $contributor -> name . ", ";
+                                }
+                            }
+                            ?> / <?php echo $news -> creation_date?></span>
                         <div class="views">
                             <i class="fas fa-eye"></i>
                             <span><?php echo $news -> views?></span>

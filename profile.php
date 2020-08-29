@@ -14,6 +14,7 @@
         $template = new Template('./templates/user_profile.php');
 
         $template -> newsList = $news -> displayUserNews($name);
+        $template -> contributorsList = $news -> getContributors();
 
         echo $template;
     } else {

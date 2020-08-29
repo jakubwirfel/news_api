@@ -1,7 +1,7 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/navbar.php';?>
     <main class="edit-container">
-        <h1>Edit Test news 1 news</h1>
+        <h1>Edit <?php echo $news -> title?> news</h1>
         <button class="btn" id="ToogleFieldset"><i class="fas fa-pen"></i> Edit</button>
         <form class="edit-form" method="POST" action="">
             <fieldset id="Fieldset" disabled>
@@ -18,6 +18,28 @@
 
                 </div>
                 <img src="<?php echo $news -> src?>" alt="<?php echo $news -> alt?>">
+            </div>
+            <div class="form-group">
+                <div class="box">
+                <label >Contributors:</label>
+                </div>
+                <p>
+                    <?php foreach($contributorsList as $contributor) {
+                            if($contributor -> news_id === $news -> id) {
+                                echo $contributor -> name . ",   ";
+                            }
+                        }
+                    ?>
+                </p>
+            </div>
+            <div class="form-group">
+                <div class="search">
+                    <label for="search">Add contributor:</label>
+                    <input class="input-edit" id="search" type="text" autocomplete="off" placeholder="Search contributor..."/>
+                    <input hidden id="userId" name="contributor">
+                    <div class="result">
+                    </div>
+                </div>
             </div>
             <input type="submit" name="update" value="Update" class="btn">
             </fieldset>
@@ -45,5 +67,27 @@
             fieldset.disabled = false;
         }
     });
+</script>
+<script>
+    $(document).ready(function(){
+    $('.search input[type="text"]').on("keyup input", function(){
+        var inputVal = $(this).val();
+        var name = '<?php echo $_SESSION['username']?>';
+        var resultDropdown = $(this).siblings(".result");
+        if(inputVal.length){
+            $.get("helpers/search_handler.php", {term: inputVal, uName: name}).done(function(data){
+                resultDropdown.html(data);
+            });
+        } else{
+            resultDropdown.empty();
+        }
+    });
+
+    $(document).on("click", ".result div", function(){
+        $(this).parents(".search").find('input[type="text"]').val($('p',this).text());
+        $(this).parents(".search").find('#userId').val($('#id',this).text());
+        $(this).parent(".result").empty();
+    });
+});
 </script>
 <?php include 'inc/footer.php';?>

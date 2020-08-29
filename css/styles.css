@@ -430,6 +430,7 @@ footer h1 {
 .main-container .news-box .news .img-box img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .main-container .line {
   width: 8px;
@@ -702,7 +703,31 @@ footer h1 {
   letter-spacing: 1px;
   font-weight: 700;
 }
-.user-container .user-news {
+.user-container .article {
+  position: relative;
+}
+.user-container .article .edit {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  right: 0px;
+  background: #E7F5DE;
+  color: #272424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  transition: ease-in-out 0.2s;
+  z-index: 999;
+}
+.user-container .article .edit:hover {
+  background: #5C868D;
+}
+.user-container .article .user-news {
   width: 100%;
   height: 200px;
   margin-top: 50px !important;
@@ -712,66 +737,54 @@ footer h1 {
   justify-content: space-between;
   color: #272424;
 }
-.user-container .user-news .content {
+.user-container .article .user-news .content {
   width: 70%;
   height: 100%;
   padding: 15px;
 }
-.user-container .user-news .content h2 {
+.user-container .article .user-news .content h2 {
   font-size: 1.2em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
-.user-container .user-news .content p {
+.user-container .article .user-news .content p {
+  display: block;
+  display: -webkit-box;
   font-family: "Roboto", sans-serif;
   padding-top: 10px;
   line-height: 18px;
-  width: 100%;
   height: 120px;
+  max-width: 100%;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.user-container .user-news .content .box {
+.user-container .article .user-news .content .box {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.user-container .user-news .content .box span {
+.user-container .article .user-news .content .box span {
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
 }
-.user-container .user-news .content .box .views {
+.user-container .article .user-news .content .box .views {
   font-size: 1.2em;
 }
-.user-container .user-news .content .box .views span {
+.user-container .article .user-news .content .box .views span {
   padding-left: 10px;
 }
-.user-container .user-news .img-box {
-  width: 20%;
+.user-container .article .user-news .img-box {
+  width: 30%;
   height: 100%;
+  background: red;
   position: relative;
 }
-.user-container .user-news .img-box .edit {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: -30px;
-  left: -30px;
-  background: #E7F5DE;
-  color: #272424;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  transition: ease-in-out 0.2s;
-}
-.user-container .user-news .img-box .edit:hover {
-  background: #5C868D;
-}
-.user-container .user-news .img-box img {
+.user-container .article .user-news .img-box img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .edit-container {

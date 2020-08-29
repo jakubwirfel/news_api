@@ -45,74 +45,86 @@
             }
         }
     }
-    .user-news {
-        width: 100%;
-        height: 200px;
-        margin-top: 50px !important;
-        background: $thiCL;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        display: flex;
-        justify-content: space-between;
-        color: $fontCL;
-        .content {
-            width: 70%;
-            height: 100%;
-            padding: 15px;
-            h2 {
-                font-size: 1.2em;
-                font-family: 'Open Sans', sans-serif;
-                font-weight: 700;
+    .article {
+        position: relative;
+        .edit{
+            cursor: pointer;
+            outline: none;
+            border: none;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            right: 0px;
+            background: $secCL;
+            color: $fontCL;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            transition: ease-in-out 0.2s;
+            z-index: 999;
+            &:hover {
+                background: $forCL;
             }
-            p {
-                font-family: 'Roboto', sans-serif;
-                padding-top: 10px;
-                line-height: 18px;
-                width: 100%;
-                height: 120px;
-            }
-            .box {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                span {
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 0.9em;
-                }
-                .views {
+        }
+        .user-news {
+            width: 100%;
+            height: 200px;
+            margin-top: 50px !important;
+            background: $thiCL;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            display: flex;
+            justify-content: space-between;
+            color: $fontCL;
+            .content {
+                width: 70%;
+                height: 100%;
+                padding: 15px;
+                h2 {
                     font-size: 1.2em;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 700;
+                }
+                p {
+                    display: block;
+                    display: -webkit-box;
+                    font-family: 'Roboto', sans-serif;
+                    padding-top: 10px;
+                    line-height: 18px;
+                    height: 120px;
+                    max-width: 100%;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                     span {
-                        padding-left: 10px;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 0.9em;
+                    }
+                    .views {
+                        font-size: 1.2em;
+                        span {
+                            padding-left: 10px;
+                        }
                     }
                 }
             }
-        }
-        .img-box {
-            width: 20%;
-            height: 100%;
-            position: relative;
-            .edit{
-                cursor: pointer;
-                outline: none;
-                border: none;
-                position: absolute;
-                width: 60px;
-                height: 60px;
-                top: -30px;
-                left: -30px;
-                background: $secCL;
-                color: $fontCL;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.5em;
-                transition: ease-in-out 0.2s;
-                &:hover {
-                    background: $forCL;
+            .img-box {
+                width: 30%;
+                height:100%;
+                background: red;
+                position: relative;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                 }
-            }
-            img {
-                height: 100%;
-                width: 100%;
             }
         }
     }

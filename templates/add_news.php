@@ -14,7 +14,7 @@
             <div class="form-group">
                 <div class="box">
                     <label for="image">Add image</label>
-                    <input type="file" id="image" name="image" class="input-edit img-input">
+                    <input type="file" id="image" name="image" class="input-edit img-input" required>
                 </div>
             </div>
             <input type="submit" name="add" value="Add" class="btn">

@@ -5,7 +5,7 @@
             <h2>User <?php echo $_GET['name'] ?> news</h2>
         </section>
         <?php foreach($newsList as $news):?>
-        <article>
+        <article class="article">
             <a href="news.php?news=<?php echo $news -> id?>" class="user-news">
                 <div class="content">
                     <h2><?php echo $news -> title?></h2>
@@ -24,12 +24,12 @@
                     </div>
                 </div>
                 <div class="img-box">
-                    <?php  if (isset($_SESSION['confirm']) && $_SESSION['confirm'] == 'start' && $_SESSION['username']== $_GET['name']) : ?>
-                        <a class="edit" href="edit.php?id=<?php echo $news -> id?>"><i class="fas fa-edit"></i></a>
-                    <?php endif;?>
                     <img src="<?php echo $news -> src?>" alt="<?php echo $news -> alt?>">
                 </div>
             </a>
+            <?php  if (isset($_SESSION['confirm']) && $_SESSION['confirm'] == 'start' && $_SESSION['username']== $_GET['name']) : ?>
+                <button class="edit" onclick="window.location.href='edit.php?id=<?php echo $news -> id?>'"><i class="fas fa-edit"></i></button>
+            <?php endif;?>
         </article>
         <?php endforeach;?>
     </main>

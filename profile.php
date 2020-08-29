@@ -1,16 +1,22 @@
 <?php include_once 'config/init.php'; ?>
 
 <?php
-    $name = $_GET['name'];
-
     $user = new User;
-    $news = new News;
 
     include_once 'helpers/log_in_out.php';
 
-    $template = new Template('./templates/user_profile.php');
+    if(isset($_GET['name'])) {
 
-    $template -> newsList = $news -> displayUserNews($name);
+        $name = $_GET['name'];
 
-    echo $template;
+        $news = new News;
+
+        $template = new Template('./templates/user_profile.php');
+
+        $template -> newsList = $news -> displayUserNews($name);
+
+        echo $template;
+    } else {
+        redirect('index.php', 'Choose a profile first', 'error');
+    }
 ?>

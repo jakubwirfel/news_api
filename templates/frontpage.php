@@ -35,15 +35,33 @@
         <aside class="info">
             <div class="best-authors">
                 <h3>Best authors of the week</h3>
-                <a href="profile.php?name=test"><span>1.</span> Test 1</a>
-                <a href="profile.php"><span>2.</span> Test 2</a>
-                <a href="profile.php"><span>3.</span> Test 3</a>
+                <?php
+                    $count = 0;
+                    foreach($bestsUsers as $bestU):
+                ?>
+                    <div class="link">
+                        <a href="profile.php?name=<?php echo $bestU -> name;?>">
+                            <span><?php echo ++$count;?>.</span>
+                            <?php echo $bestU -> name;?>
+                        </a>
+                        <div class="views-box"><i class="fas fa-pen"></i><span class="views"><?php echo $bestU -> countNews;?></span></div>
+                    </div>
+                <?php  endforeach;?>
             </div>
             <div class="best-news">
                 <h3>Best news of the week</h3>
-                <a href="news.php"><span>1.</span> Test news 1</a>
-                <a href="news.php"><span>2.</span> Test news 2</a>
-                <a href="news.php"><span>3.</span> Test news 3</a>
+                <?php
+                    $count = 0;
+                    foreach($bestsNews as $bestN):
+                ?>
+                    <div class="link">
+                        <a href="news.php?news=<?php echo $bestN -> id;?>">
+                            <span><?php echo ++$count;?>.</span>
+                            <?php echo $bestN -> title;?>
+                        </a>
+                        <div class="views-box"><i class="fas fa-eye"></i><span class="views"><?php echo $bestN -> views;?></span></div>
+                    </div>
+                <?php  endforeach;?>
             </div>
         </aside>
     </main>

@@ -3,7 +3,7 @@
     <main class="edit-container">
         <h1>Edit Test news 1 news</h1>
         <button class="btn" id="ToogleFieldset"><i class="fas fa-pen"></i> Edit</button>
-        <form class="edit-form" method="POST" action="profile.php?name=<?php echo $_SESSION['username'] ?>">
+        <form class="edit-form" method="POST" action="">
             <fieldset id="Fieldset" disabled>
             <div class="form-group">
                 <label for="title">News title:</label>
@@ -15,11 +15,9 @@
             </div>
             <div class="form-group">
                 <div class="box">
-                    <label for="inputImage" >Change image</label>
-                    <input type="file" id="image" name="image" class="input-edit img-input">
+
                 </div>
                 <img src="<?php echo $news -> src?>" alt="<?php echo $news -> alt?>">
-                <input hidden type="text" name="path" value="<?php echo $news -> src?>">
             </div>
             <input type="submit" name="update" value="Update" class="btn">
             </fieldset>

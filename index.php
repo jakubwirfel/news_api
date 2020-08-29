@@ -8,6 +8,9 @@
 
     $template = new Template('./templates/frontpage.php');
 
+    $template -> bestsNews = $news -> getBestNews();
+    $template -> bestsUsers = $news -> getBestUsers();
+
     $template -> newsList = $news -> displayNewsList();
 
     echo $template;

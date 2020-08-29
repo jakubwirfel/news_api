@@ -4,22 +4,20 @@
     $news = new News;
     $user = new User;
 
+    include_once 'helpers/log_in_out.php';
+
     $id = $_GET['id'];
+
     if($news -> checkNewsToUser($id)) {
+
         if(isset($_POST['update'])) {
             $title = trim($_POST['title']);
             $content = trim($_POST['content']);
-            $path = trim($_POST['path']);
-            $image = $_FILES['image'];
 
-            $data = array();
-            $data['title'] = $title;
-            $data['content'] =  $content;
-
-            if($news -> editNews($data, $image, $path)) {
-                redirect('index.php', 'You update news', 'success');
+            if($news -> editNews($title, $content, $id)) {
+                redirect("profile.php?name={$_SESSION['username']}", 'Changes has been made', 'succes');
             } else {
-                redirect('index.php', 'Something went wrong', 'error');
+                redirect("profile.php?name={$_SESSION['username']}", 'Something went wrong', 'error');
             }
         }
 
@@ -29,6 +27,6 @@
 
         echo $template;
     } else {
-        redirect('index.php', 'Login first', 'error');
+        redirect('index.php', 'Invalid user', 'error');
     }
 ?>

@@ -465,6 +465,7 @@ footer h1 {
 .main-container .info .best-news a {
   padding-top: 15px;
   font-family: "Roboto", sans-serif;
+  width: 50%;
 }
 .main-container .info .best-authors p span, .main-container .info .best-authors a span,
 .main-container .info .best-news p span,
@@ -472,10 +473,32 @@ footer h1 {
   font-size: 1.4em;
   font-weight: 700;
 }
+.main-container .info .best-authors .link,
+.main-container .info .best-news .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-container .info .best-authors .views-box,
+.main-container .info .best-news .views-box {
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.main-container .info .best-authors .views-box .views,
+.main-container .info .best-news .views-box .views {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #6C3D46;
+  padding-left: 5px;
+}
 .main-container .info .best-authors a,
 .main-container .info .best-news a {
   cursor: pointer;
   color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
 }
 .main-container .info .best-authors a:hover,
 .main-container .info .best-news a:hover {

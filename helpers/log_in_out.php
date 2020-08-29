@@ -9,12 +9,12 @@ if(isset($_POST['login'])) {
         $data['password'] = $password;
 
         if($user -> login($data)) {
-            redirect($_SERVER['PHP_SELF'], 'You login', 'success');
+            redirect('index.php', 'You login', 'success');
         } else {
-            redirect($_SERVER['PHP_SELF'], 'Incorrect username or psassword', 'error');
+            redirect('index.php', 'Incorrect username or psassword', 'error');
         }
     } else {
-        redirect($_SERVER['PHP_SELF'], 'Username and password are required', 'error');
+        redirect('index.php', 'Username and password are required', 'error');
     }
 }
 

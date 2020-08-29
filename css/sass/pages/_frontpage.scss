@@ -131,14 +131,34 @@
             p,a {
                 padding-top: 15px;
                 font-family: 'Roboto', sans-serif;
+                width: 50%;
                 span {
                     font-size: 1.4em;
                     font-weight: 700;
                 }
             }
+            .link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .views-box {
+                padding-left: 20px;
+                padding-top: 15px;
+                .views {
+                    font-size: 1.1em;
+                    font-weight: 700;
+                    color: $fifCL;
+                    padding-left: 5px;
+                }
+            }
             a {
                 cursor: pointer;
                 color: inherit;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 70%;
                 &:hover {
                     color: $fifCL;
                     font-weight: 700;

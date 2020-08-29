@@ -5,7 +5,8 @@
             <h2>User <?php echo $_GET['name'] ?> news</h2>
         </section>
         <?php foreach($newsList as $news):?>
-        <article class="user-news">
+        <article>
+            <a href="news.php?news=<?php echo $news -> id?>" class="user-news">
                 <div class="content">
                     <h2><?php echo $news -> title?></h2>
                     <p><?php echo $news -> content?></p>
@@ -28,6 +29,7 @@
                     <?php endif;?>
                     <img src="<?php echo $news -> src?>" alt="<?php echo $news -> alt?>">
                 </div>
+            </a>
         </article>
         <?php endforeach;?>
     </main>

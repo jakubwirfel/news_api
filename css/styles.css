@@ -710,6 +710,7 @@ footer h1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display: flex;
   justify-content: space-between;
+  color: #272424;
 }
 .user-container .user-news .content {
   width: 70%;

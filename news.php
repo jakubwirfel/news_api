@@ -14,6 +14,7 @@
         $template = new Template('./templates/news_checkout.php');
 
         $template -> news = $news -> displayNews($id);
+        $template -> contributorsList = $news -> getContributors();
 
         echo $template;
     } else {

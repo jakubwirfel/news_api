@@ -15,7 +15,7 @@
 5. Create a new database named news_api
 6. Import the sql file: news_api.sql to the database
 7. If everything has been done correctly the website should already be
-        functional at the link: http://127.0.0.1/news_api/index.php
+        functional at the link: http://127.0.0.1/news_api/index.php or http://127.0.0.1/news_api-master/index.php (depending on the download source)
 
 ## Running the tests
 ###### DEFAULT USER NAME: test

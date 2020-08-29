@@ -1,7 +1,23 @@
 <?php include_once 'config/init.php'; ?>
 
 <?php
-    $template = new Template('./templates/user_profile.php');
+    $user = new User;
 
-    echo $template;
+    include_once 'helpers/log_in_out.php';
+
+    if(isset($_GET['name'])) {
+
+        $name = $_GET['name'];
+
+        $news = new News;
+
+        $template = new Template('./templates/user_profile.php');
+
+        $template -> newsList = $news -> displayUserNews($name);
+        $template -> contributorsList = $news -> getContributors();
+
+        echo $template;
+    } else {
+        redirect('index.php', 'Choose a profile first', 'error');
+    }
 ?>

@@ -42,6 +42,11 @@
             display: flex;
             justify-content: space-between;
             margin: 0px 0px 30px !important;
+            p {
+                font-size: 1.2em;
+                color: $fontCL;
+                font-family: 'Roboto', sans-serif;
+            }
             label {
                 font-size: 1.5em;
                 color: $fontCL;
@@ -63,6 +68,42 @@
                 flex-direction: column;
                 .img-input{
                     margin-top: 20px !important;
+                }
+            }
+            .search{
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                width: 100%;
+                input[type="text"]{
+                    width: 80%;
+                    .result{
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
+                .result {
+                    position: absolute;
+                    z-index: 999;
+                    top: 100%;
+                    right: 0;
+                    background: $forCL;
+                    width: 80%;
+                    max-height: 160px;
+                    overflow-y: auto;
+                    p {
+                        margin: 0;
+                        padding: 10px;
+                        border-bottom: 1px solid $thiCL;
+                        border-top: none;
+                        cursor: pointer;
+                        font-family: 'Manjari', sans-serif;
+                        font-size: 1.2em;
+                        color: $fontCL;
+                        &:hover {
+                            background: $thiCL;
+                        }
+                    }
                 }
             }
         }
